@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/Mearman/pi-perms/compare/v1.0.1...v1.0.2) (2026-05-10)
+
+### Refactoring
+
+* delegate evaluate + loader to agent-perms@1.1.0 ([6edbf2a](https://github.com/Mearman/pi-perms/commit/6edbf2afe40457afc9dbdee3ab2645727bd48756))
+
 ## [1.0.1](https://github.com/Mearman/pi-perms/compare/v1.0.0...v1.0.1) (2026-05-10)
 
 ### Chores
