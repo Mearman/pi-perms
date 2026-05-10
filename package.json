@@ -56,7 +56,7 @@
     }
   },
   "dependencies": {
-    "agent-perms": "^1.1.0"
+    "agent-perms": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",

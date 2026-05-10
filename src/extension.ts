@@ -14,7 +14,8 @@ import type {
   ToolCallEventResult,
 } from "@earendil-works/pi-coding-agent";
 
-import { evaluate, loadPolicy } from "agent-perms";
+import { evaluate } from "agent-perms/evaluate";
+import { loadPolicy } from "agent-perms/loader";
 
 interface PiPermsConfig {
   nativeSources?: ("claude-code" | "codex" | "opencode")[];
