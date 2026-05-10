@@ -1,5 +1,9 @@
 # pi-perms
 
+[![npm version](https://img.shields.io/npm/v/pi-perms.svg)](https://www.npmjs.com/package/pi-perms)
+[![License](https://img.shields.io/badge/License-Apache--2.0-lightgrey.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CI](https://img.shields.io/github/actions/workflow/status/Mearman/pi-perms/ci.yml?branch=main)](https://github.com/Mearman/pi-perms/actions)
+
 Pi CLI extension that enforces a cross-agent permission policy from `.agents/permissions.json`.
 
 Uses [agent-perms](https://www.npmjs.com/package/agent-perms) for evaluation and policy loading. See the [agent-perms README](https://github.com/Mearman/agent-permissions#readme) for the full schema, rule syntax, and codec documentation.
