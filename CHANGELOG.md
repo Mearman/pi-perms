@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Mearman/pi-perms/compare/v1.2.0...v1.2.1) (2026-05-10)
+
+### Documentation
+
+* add npm version, license, and CI badges ([9372dc4](https://github.com/Mearman/pi-perms/commit/9372dc4b04143aee1291108d4961addccc7e967f))
+* add README — policy file, rule syntax, source structure ([db3955f](https://github.com/Mearman/pi-perms/commit/db3955f0bfc0c848217ed9d6873321e4273a510e))
+
 ## [1.2.0](https://github.com/Mearman/pi-perms/compare/v1.1.1...v1.2.0) (2026-05-10)
 
 ### Features
