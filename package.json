@@ -1,0 +1,80 @@
+{
+  "name": "pi-perms",
+  "version": "0.1.0",
+  "description": "Pi CLI extension — configurable permission policy from .agents/permissions.json and native agent configs",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --cache src",
+    "lint:fix": "eslint --cache --fix src",
+    "test": "node --experimental-strip-types --test src/test/*.test.ts",
+    "validate": "pnpm typecheck && pnpm lint && pnpm test",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "pi",
+    "pi-package",
+    "permissions",
+    "agents",
+    "coding-agent",
+    "claude-code",
+    "codex",
+    "opencode"
+  ],
+  "author": "Joseph Mearman",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Mearman/pi-perms#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mearman/pi-perms.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "pi": {
+    "extensions": ["./src/index.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.74"
+  },
+  "peerDependenciesMeta": {
+    "@mariozechner/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "agent-perms": "^1.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "@eslint/js": "^10.0.1",
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.8",
+    "@semantic-release/npm": "^13.1.5",
+    "@types/node": "^25.6.2",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.3",
+    "prettier": "^3.8.3",
+    "semantic-release": "^25.0.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
+  },
+  "packageManager": "pnpm@11.0.9"
+}
