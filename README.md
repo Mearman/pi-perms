@@ -29,13 +29,20 @@ Create `.agents/permissions.json` in your project root:
 
 ```json
 {
-  "permissions": {
-    "allow": ["Bash(git status)", "Bash(npm run test:*)", "Read", "Grep"],
-    "deny": ["Bash(sudo:*)", "Bash(rm -rf /)"],
-    "ask": ["Bash(git push:*)", "Bash(npm publish:*)"]
-  }
+  "rules": [
+    { "tool": "Bash", "pattern": "git status", "tier": "allow" },
+    { "tool": "Bash", "pattern": "npm run test:*", "tier": "allow" },
+    { "tool": "Read", "tier": "allow" },
+    { "tool": "Grep", "tier": "allow" },
+    { "tool": "Bash", "pattern": "sudo:*", "tier": "deny" },
+    { "tool": "Bash", "pattern": "rm -rf /", "tier": "deny" },
+    { "tool": "Bash", "pattern": "git push:*", "tier": "ask" },
+    { "tool": "Bash", "pattern": "npm publish:*", "tier": "ask" }
+  ]
 }
 ```
+
+Claude Code's `permissions.allow/deny/ask` arrays are also accepted — the loader normalises them into `rules`.
 
 | File | Purpose | Git |
 |---|---|---|
@@ -44,7 +51,7 @@ Create `.agents/permissions.json` in your project root:
 
 ## Rule syntax
 
-Rules use `Tool(pattern)` strings compatible with Claude Code:
+Rules use structured objects with `tool`, optional `pattern`, and `tier`. In `permissions` compat arrays, they use `Tool(pattern)` strings:
 
 | Pattern | Matches |
 |---|---|
