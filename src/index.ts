@@ -30,9 +30,7 @@ interface PiPermsConfig {
 
 const DEFAULT_CONFIG: PiPermsConfig = {};
 
-export default function piPerms(
-  pi: Parameters<ExtensionFactory>[0],
-): Promise<void> {
+export default function piPerms(pi: Parameters<ExtensionFactory>[0]): void {
   const config: PiPermsConfig = DEFAULT_CONFIG;
 
   pi.on("tool_call", async (event: ToolCallEvent, ctx: ExtensionContext) => {
