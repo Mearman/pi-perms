@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/Mearman/pi-perms/compare/v1.2.1...v1.2.2) (2026-05-10)
+
+### Chores
+
+* add pre-commit, commit-msg, and pre-push husky hooks ([a67d12b](https://github.com/Mearman/pi-perms/commit/a67d12ba8c6a4e70793b02d457d0d64045bf2a5a))
+
 ## [1.2.1](https://github.com/Mearman/pi-perms/compare/v1.2.0...v1.2.1) (2026-05-10)
 
 ### Documentation
