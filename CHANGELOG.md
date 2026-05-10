@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/Mearman/pi-perms/compare/v1.2.3...v2.0.0) (2026-05-10)
+
+### ⚠ BREAKING CHANGES
+
+* requires agent-perms@^4 which uses unified
+rules[] instead of permissions.allow/deny/ask
+
+### Features
+
+* update to agent-perms@4 (unified rules) ([f5ef785](https://github.com/Mearman/pi-perms/commit/f5ef785bbf6825e4e9358555895daddbcc60567e))
+
 ## [1.2.3](https://github.com/Mearman/pi-perms/compare/v1.2.2...v1.2.3) (2026-05-10)
 
 ### Chores
