@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/Mearman/pi-perms/compare/v1.0.0...v1.0.1) (2026-05-10)
+
+### Chores
+
+* bump version to 1.0.1 ([f072d2c](https://github.com/Mearman/pi-perms/commit/f072d2cd1c8708747c73d9c342aa85cd5c8ba141))
+
 ## 1.0.0 (2026-05-10)
 
 ### Features
