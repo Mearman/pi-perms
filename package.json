@@ -1,6 +1,6 @@
 {
   "name": "pi-perms",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Pi CLI extension — configurable permission policy from .agents/permissions.json and native agent configs",
   "type": "module",
   "sideEffects": false,
@@ -42,7 +42,9 @@
     "provenance": true
   },
   "pi": {
-    "extensions": ["./src/index.ts"]
+    "extensions": [
+      "./src/index.ts"
+    ]
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": ">=0.74"
