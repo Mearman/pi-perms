@@ -5,7 +5,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 
-import { extractInput } from "../index.ts";
+import { extractInput } from "../extension.ts";
 
 describe("extractInput", () => {
   it("extracts command from bash tool", () => {
@@ -13,7 +13,10 @@ describe("extractInput", () => {
   });
 
   it("extracts path from read tool", () => {
-    assert.equal(extractInput("read", { path: "src/index.ts" }), "src/index.ts");
+    assert.equal(
+      extractInput("read", { path: "src/index.ts" }),
+      "src/index.ts",
+    );
   });
 
   it("extracts path from write tool", () => {
