@@ -1,6 +1,6 @@
 {
   "name": "pi-perms",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Pi CLI extension — configurable permission policy from .agents/permissions.json and native agent configs",
   "type": "module",
   "sideEffects": false,

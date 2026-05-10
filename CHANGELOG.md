@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/Mearman/pi-perms/compare/v1.0.2...v1.1.0) (2026-05-10)
+
+### Features
+
+* add test coverage, export extractInput ([e17907b](https://github.com/Mearman/pi-perms/commit/e17907b5d987497ce64035feed2cbc18547d01ba))
+
+### Refactoring
+
+* rename index.ts to extension.ts ([567adc8](https://github.com/Mearman/pi-perms/commit/567adc80d4102352ea67f2b87ba672b3ef052174))
+
 ## [1.0.2](https://github.com/Mearman/pi-perms/compare/v1.0.1...v1.0.2) (2026-05-10)
 
 ### Refactoring
