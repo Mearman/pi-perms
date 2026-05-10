@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/Mearman/pi-perms/compare/v1.1.0...v1.1.1) (2026-05-10)
+
+### Refactoring
+
+* use agent-perms@2 wildcard subpath imports ([2a422a9](https://github.com/Mearman/pi-perms/commit/2a422a9730a84f3f4180d9cb0e1a8083eed3e28b))
+
 ## [1.1.0](https://github.com/Mearman/pi-perms/compare/v1.0.2...v1.1.0) (2026-05-10)
 
 ### Features
