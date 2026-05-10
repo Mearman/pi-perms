@@ -68,7 +68,7 @@ function handleAsk(
 /**
  * Extract a single input string from tool parameters for rule matching.
  */
-function extractInput(
+export function extractInput(
   toolName: string,
   input: Record<string, unknown>,
 ): string {
