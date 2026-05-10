@@ -1,3 +1,13 @@
+## [1.2.0](https://github.com/Mearman/pi-perms/compare/v1.1.1...v1.2.0) (2026-05-10)
+
+### Features
+
+* e2e tests for pi-perms extension ([1e2f51b](https://github.com/Mearman/pi-perms/commit/1e2f51b5a62400e75fa50ca3bc5eb1a899a2ff5a))
+
+### Chores
+
+* update to agent-perms@3 (Claude Code rule syntax) ([986c25c](https://github.com/Mearman/pi-perms/commit/986c25ccea2293feb91ac9f238bc22541f4819b0))
+
 ## [1.1.1](https://github.com/Mearman/pi-perms/compare/v1.1.0...v1.1.1) (2026-05-10)
 
 ### Refactoring
