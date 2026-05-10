@@ -4,12 +4,6 @@
  * Subscribes to `tool_call` events and evaluates them against the loaded
  * permission policy. Blocks denied calls, prompts on ask, and allows
  * everything else according to the policy's defaultMode.
- *
- * Configuration via `.agents/pi-perms.json`:
- *   {
- *     "nativeSources": ["claude-code", "opencode"],
- *     "blockMessage": "Blocked by permission policy"
- *   }
  */
 
 import type {
@@ -20,8 +14,7 @@ import type {
   ToolCallEventResult,
 } from "@earendil-works/pi-coding-agent";
 
-import { evaluate } from "./evaluate.ts";
-import { loadPolicy } from "./loader.ts";
+import { evaluate, loadPolicy } from "agent-perms";
 
 interface PiPermsConfig {
   nativeSources?: ("claude-code" | "codex" | "opencode")[];
@@ -64,12 +57,9 @@ function handleAsk(
 ): ToolCallEventResult | undefined {
   if (!hasUI) return undefined;
 
-  // We can't await inside a synchronous return, but the Pi API
-  // supports async handlers — the caller awaits the result.
-  // However, to keep the control flow clean, we return undefined
-  // and let Pi handle the confirmation flow.
   // A more complete implementation would use ctx.ui.confirm().
-  // For now, ask means "ask the user" — but we can't block synchronously.
+  // For now, ask means "ask the user" — but we return undefined
+  // and let Pi handle the default confirmation flow.
   void ui;
   void toolName;
   return undefined;
@@ -77,7 +67,6 @@ function handleAsk(
 
 /**
  * Extract a single input string from tool parameters for rule matching.
- * Different tools have different parameter shapes.
  */
 function extractInput(
   toolName: string,

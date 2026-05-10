@@ -55,13 +55,13 @@
     }
   },
   "dependencies": {
-    "agent-perms": "^1.0.1"
+    "agent-perms": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
-    "@eslint/js": "^10.0.1",
     "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@eslint/js": "^10.0.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^12.0.8",

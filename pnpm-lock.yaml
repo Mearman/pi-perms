@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       agent-perms:
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.1.0
+        version: 1.1.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^21.0.0
@@ -961,8 +961,8 @@ packages:
     resolution: {integrity: sha512-TQf59BsZnytt8GdJKLPfUZ54g/iaUL2OWDSFCCvMOhsHduDQxO8xC4PNeyIkVcA5KwL2phPSv0douC0fgWzmnA==}
     engines: {node: '>= 20'}
 
-  agent-perms@1.0.1:
-    resolution: {integrity: sha512-q4cfgsdLfH/tWC2ryMqN47c17Pjg561aBPoBvTxBr8RCNIOwRA7rNI2UpIiUG4v9WavJZ8CdMTM0nKFhj5PxUQ==}
+  agent-perms@1.1.0:
+    resolution: {integrity: sha512-YPMGUCNhXMrhItN21B0xicNpqDiW4Yyrx8KezSnMTQAWbszMLD3yRv1A/Lan7UkGw4z/Vcxe6UaIT39kZURgzA==}
     engines: {node: '>=18'}
 
   aggregate-error@3.1.0:
@@ -4134,7 +4134,7 @@ snapshots:
 
   agent-base@9.0.0: {}
 
-  agent-perms@1.0.1:
+  agent-perms@1.1.0:
     dependencies:
       zod: 4.4.3
 
