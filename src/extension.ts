@@ -2,8 +2,14 @@
  * pi-perms — Pi CLI extension for cross-agent permission enforcement.
  *
  * Subscribes to `tool_call` events and evaluates them against the loaded
- * permission policy. Blocks denied calls, prompts on ask, and allows
- * everything else according to the policy's defaultMode.
+ * permission policy. The policy is discovered by walking up from `cwd`,
+ * reading `.agents/permissions.json` and `.agents/permissions.local.json`
+ * at each level, plus native agent configs specified by the canonical
+ * policy's `with` field.
+ *
+ * No separate configuration needed — the `.agents/permissions.json`
+ * file controls everything: which harnesses to read, how far to walk up,
+ * and what the rules are.
  */
 
 import type {
@@ -17,21 +23,12 @@ import type {
 import { evaluate } from "agent-perms/evaluate";
 import { loadPolicy } from "agent-perms/loader";
 
-interface PiPermsConfig {
-  nativeSources?: ("claude-code" | "codex" | "opencode")[];
-  blockMessage?: string;
-}
-
-const DEFAULT_CONFIG: PiPermsConfig = {};
+/** Customisable message shown when a tool call is denied. */
+const BLOCK_MESSAGE = "Denied by permission policy";
 
 export default function piPerms(pi: Parameters<ExtensionFactory>[0]): void {
-  const config: PiPermsConfig = DEFAULT_CONFIG;
-
   pi.on("tool_call", async (event: ToolCallEvent, ctx: ExtensionContext) => {
-    const policy = await loadPolicy({
-      cwd: ctx.cwd,
-      nativeSources: config.nativeSources,
-    });
+    const policy = await loadPolicy({ cwd: ctx.cwd });
 
     const toolName = event.toolName;
     const input = extractInput(toolName, event.input);
@@ -41,10 +38,10 @@ export default function piPerms(pi: Parameters<ExtensionFactory>[0]): void {
       case "deny":
         return {
           block: true,
-          reason: config.blockMessage ?? "Denied by permission policy",
+          reason: BLOCK_MESSAGE,
         } satisfies ToolCallEventResult;
       case "ask":
-        return handleAsk(ctx.ui, ctx.hasUI, toolName);
+        return handleAsk(ctx.ui, ctx.hasUI);
       case "allow":
         return undefined;
     }
@@ -54,15 +51,13 @@ export default function piPerms(pi: Parameters<ExtensionFactory>[0]): void {
 function handleAsk(
   ui: ExtensionUIContext,
   hasUI: boolean,
-  toolName: string,
 ): ToolCallEventResult | undefined {
   if (!hasUI) return undefined;
 
   // A more complete implementation would use ctx.ui.confirm().
-  // For now, ask means "ask the user" — but we return undefined
-  // and let Pi handle the default confirmation flow.
+  // For now, ask means "ask the user" — return undefined and let
+  // Pi handle the default confirmation flow.
   void ui;
-  void toolName;
   return undefined;
 }
 
