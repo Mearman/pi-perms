@@ -1,3 +1,13 @@
+## [2.1.0](https://github.com/Mearman/pi-perms/compare/v2.0.0...v2.1.0) (2026-05-12)
+
+### Features
+
+* simplify extension to use walk-up loader with with/without/up ([9743849](https://github.com/Mearman/pi-perms/commit/97438491963a9e2b3a72ba70c526800d7dcf0211))
+
+### Bug Fixes
+
+* **ci:** ignore @mistralai/mistralai malware advisory ([5b542a5](https://github.com/Mearman/pi-perms/commit/5b542a5e67892b774e743eb70261b479293749fd))
+
 ## [2.0.0](https://github.com/Mearman/pi-perms/compare/v1.2.3...v2.0.0) (2026-05-10)
 
 ### ⚠ BREAKING CHANGES
