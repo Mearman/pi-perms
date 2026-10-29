@@ -1,8 +1,8 @@
 # pi-perms
 
-[![npm version](https://img.shields.io/npm/v/pi-perms.svg)](https://www.npmjs.com/package/pi-perms)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Mearman/pi-perms) [![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/package/pi-perms) [![Release](https://img.shields.io/github/v/release/Mearman/pi-perms)](https://github.com/Mearman/pi-perms/releases/latest) [![CI](https://img.shields.io/github/actions/workflow/status/Mearman/pi-perms/ci.yml?branch=main)](https://github.com/Mearman/pi-perms/actions)
+
 [![License](https://img.shields.io/badge/License-Apache--2.0-lightgrey.svg)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/Mearman/pi-perms/ci.yml?branch=main)](https://github.com/Mearman/pi-perms/actions)
 
 Pi CLI extension that enforces a cross-agent permission policy from `.agents/permissions.json`.
 
