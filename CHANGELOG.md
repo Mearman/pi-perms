@@ -1,3 +1,9 @@
+## [2.1.1](https://github.com/Mearman/pi-perms/compare/v2.1.0...v2.1.1) (2026-10-29)
+
+### Documentation
+
+* add the standard badge row to the README ([a8d51d0](https://github.com/Mearman/pi-perms/commit/a8d51d0a773945337a50df86b81d4a1c5a344cd4))
+
 ## [2.1.0](https://github.com/Mearman/pi-perms/compare/v2.0.0...v2.1.0) (2026-05-12)
 
 ### Features
